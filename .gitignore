@@ -8,7 +8,10 @@ jspm_packages
 /coverage
 
 # production
-/build
+build
+/example/build
+/example/node_modules
+
 
 # misc
 .DS_Store

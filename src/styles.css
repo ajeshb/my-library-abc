@@ -1,8 +1,32 @@
 /* add css styles here (optional) */
 
-.test {
-  display: inline-block;
-  margin: 2em auto;
-  border: 2px solid #000;
-  font-size: 2em;
+.container {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+}
+.channelList{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.channelPrograms{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+.programCell{
+  border-left: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: gray;
+}
+.programlList{
+  
+}
+.channelPrograms{
+  border: 1px solid black;
 }
