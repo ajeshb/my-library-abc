@@ -4,29 +4,180 @@
   width: 100%;
   border: 1px solid black;
   display: flex;
+  background: #2b2b2b;
 }
 .channelList{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  margin-top: 40px;
+  max-height: calc( 100% - 40px);
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+.channelList::-webkit-scrollbar {
+  display: none;
+}
+.logo{
+  width: 90px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-left: 20px;
+}
+.channelProgramList{
+  max-height: calc( 100% - 40px);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .channelPrograms{
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   position: relative;
-  border-bottom: 1px solid black;
+  background: #090909;
+}
+.timer{
+  height: 40px;
 }
 .programCell{
-  border-left: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1px;
+  background: #434343;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.emptyCell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+  background: #535353;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.programCellCurrent{
+  background: #5e5e5e;
+}
+.programName{
+  width: calc( 100% - 40px );
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  color: #fff;
+  font-size: 18px;
+}
+.programDuration{
+  width: calc( 100% - 40px );
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding: 0 5px;
+  color: #b5b5b5;
+  font-size: 14px;
+  font-size: 16px;
+}
+.timeNote{
   position: absolute;
-  background: gray;
+  top: 0px;
+  height: 40px;
+  width: 60px;
+  border-left: 1px solid #fff;
+  z-index: 20;
+}
+.time{
+  margin: 0;
+  height: 100%;
+  margin-left: 10px;
+  color: #c0c0c0;
+  line-height: 40px;
+  font-size: 18px;
 }
 .programlList{
-  
+  overflow: auto;
+  position: relative;
 }
 .channelPrograms{
-  border: 1px solid black;
+}
+.channelTitle{
+  background-image: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(0, 0, 0, 0.5));
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.channelCode{
+  width: calc( 100% - 140px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 20px;
+  font-size: 14px;
+}
+.placeholderPath{
+  fill: #b3b3b3
+}
+.placeholder{
+  margin-left: 20px;
+}
+.currentTime{
+  position: absolute;
+  top: 30px;
+  bottom: 0;
+  width: 2px;
+  background: #f6cc15;
+  z-index: 30;
+}
+.currentTimeLabel{
+  margin-left: -20px;
+  background: #f6cc15;
+  z-index: 40;
+  width: 40px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+
+
+/* SCROLL BAR HANDLING */
+.channelProgramList::-webkit-scrollbar {
+  width: 2px;
+}
+ 
+.channelProgramList::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.channelProgramList::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.programlList::-webkit-scrollbar {
+  height: 4px;
+}
+ 
+.programlList::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.programlList::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+.rightArrow{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  border-radius: 50%;
 }
