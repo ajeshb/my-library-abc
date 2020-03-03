@@ -88,7 +88,7 @@
   height: 40px;
   width: 60px;
   border-left: 1px solid #fff;
-  z-index: 20;
+  z-index: 2;
 }
 .time{
   margin: 0;
@@ -130,12 +130,12 @@
   bottom: 0;
   width: 2px;
   background: #f6cc15;
-  z-index: 30;
+  z-index: 3;
 }
 .currentTimeLabel{
   margin-left: -20px;
   background: #f6cc15;
-  z-index: 40;
+  z-index: 4;
   width: 40px;
   height: 20px;
   font-size: 10px;
